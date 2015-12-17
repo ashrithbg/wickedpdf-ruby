@@ -1,0 +1,29 @@
+<div class='col-md-10 col-md-offset-1'>
+  <h2>Quotes</h2>
+  <%= link_to "New", new_quote_path %>
+  <div class='panel panel-default'>
+    <div class='panel-body'>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Quote Date</th>
+            <th>Quote Number</th>
+            <th>Advisor Name</th>
+            <th>Company Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @quotes.each do |quote| %>
+            <tr>
+              <td><%= quote.quote_date %></td>
+              <td><%= quote.quote_number %></td>
+              <td><%= quote.advisor_name %></td>
+              <td><%= quote.company_name %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

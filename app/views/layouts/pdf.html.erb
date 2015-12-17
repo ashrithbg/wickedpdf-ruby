@@ -1,0 +1,18 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+  <!--  <%= wicked_pdf_stylesheet_link_tag "pdf" -%> -->
+    <%= wicked_pdf_javascript_include_tag "number_pages" %> 
+  </head>
+  <body onload='number_pages'>
+    
+    <div id="container">
+    	<%= wicked_pdf_image_tag 'background1.jpg',:alt => 'this is a logo',:width => "612",:height=>"792",:style => "position:absolute;left:0px;top:0px" %>
+      <%= wicked_pdf_image_tag 'background2.jpg',:alt => 'this is a logo',:width => "612",:height=>"792",:style => "position:absolute;left:0px;top:0px"%>
+
+    <%= yield %>
+    </div>
+  </body>
+</html>

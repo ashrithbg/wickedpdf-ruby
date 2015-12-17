@@ -1,0 +1,28 @@
+<h3>New Quote</h3>
+
+<%= form_for @quote do |f| %>
+  <div class="form-group">
+  <%= f.label :quote_number, :class=>"control-label" %>
+  <%= f.text_field :quote_number, label: "Quote Number", :class => "form-control" %>
+  </div>
+  
+  <div class="form-group">
+  <%= f.label :company_name, :class=>"control-label" %>
+  <%= f.text_field :company_name, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+  <%= f.label :advisor_name, :class=>"control-label" %>
+  <%= f.text_field :advisor_name, :class => "form-control" %>
+  </div>
+  
+  <div class="form-group">
+  <%= f.label :quote_date, :class=>"control-label" %>
+  <%= f.date_field :quote_date, :class => "form-control" %>
+  </div>
+  
+  <div class="form-actions">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', @user, :class => 'btn' %>
+  </div>
+<% end %>
